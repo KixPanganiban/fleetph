@@ -45,9 +45,6 @@ class ShipViewSet(viewsets.ModelViewSet):
 class TripViewSet(viewsets.ModelViewSet):
     serializer_class = TripSerializer
     queryset = Trip.objects.all()
-    paginate_by = 10
-    paginate_by_param = 'page_size'
-    max_paginate_by = 50
 
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:

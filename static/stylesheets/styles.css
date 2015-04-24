@@ -7,6 +7,11 @@
     opacity: .6;
 }
 
+.solid-color {
+    opacity: 1 !important;
+    z-index: 99;
+}
+
 /**
  * Navbars;
  *
@@ -82,8 +87,9 @@
  */
 
 .search-header {
-	margin-top: -75px;
+	margin-top: -90px;
 	margin-bottom: 30px;
+	padding: 10px;
 }
 
 

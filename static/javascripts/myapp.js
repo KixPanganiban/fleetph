@@ -6,7 +6,9 @@
       'myapp.config',
       'myapp.routes',
       'myapp.authentication',
-      'myapp.layout'
+      'myapp.layout',
+      'myapp.trips',
+      'myapp.utils'
     ]);
 
   angular
