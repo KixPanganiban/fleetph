@@ -11,7 +11,7 @@
     ]);
 
   angular
-    .module('myapp.requests.controllers', []);
+    .module('myapp.requests.controllers', ['geolocation']);
 
   angular
     .module('myapp.requests.directives', ['ngDialog']);
