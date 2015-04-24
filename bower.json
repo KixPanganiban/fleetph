@@ -23,6 +23,7 @@
     "ngDialog": "~0.3.12",
     "underscore": "~1.8.3",
     "angular-local-storage": "~0.1.5",
-    "angular-facebook": "~0.2.3"
+    "angular-facebook": "~0.2.3",
+    "angularjs-geolocation": "~0.1.1"
   }
 }
