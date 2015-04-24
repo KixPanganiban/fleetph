@@ -10,12 +10,6 @@ class Request(models.Model):
     status = models.TextField(choices=(('O', 'Open'), ('C', 'Closed')),
                               default='O')
 
-    @classmethod
-    def create_request(cls, user, origin, destination):
-        req = cls(user=user, origin=origin, destination=destination,
-                  status='O')
-        return req.save()
-
 class Ship(models.Model):
     owner = models.ForeignKey(User)
     name = models.TextField(unique=True)
@@ -23,12 +17,12 @@ class Ship(models.Model):
     plate_no = models.TextField(unique=True)
 
     def start_new_trip(self, origin, destination):
-        for past_trip in Trip.objects.filter(ship=self, status='0'):
+        for past_trip in Trip.objects.filter(ship=self, status='O'):
             past_trip.status = 'D'
             past_trip.save()
 
         trip = Trip(ship=self, origin=origin, destination=destination,
-                    status='0')
+                    status='O')
         return trip.save()
 
     def get_all_trips(self):
@@ -47,6 +41,6 @@ class Trip(models.Model):
     origin = models.TextField()
     destination = models.TextField()
     status = models.TextField(choices=(('O', 'Ongoing'), ('D', 'Done')),
-                              default='0')
+                              default='O')
     created = models.DateTimeField(auto_now_add=True)
     closed = models.DateTimeField(null=True, blank=True)

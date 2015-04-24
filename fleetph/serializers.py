@@ -20,18 +20,18 @@ class ShipSerializer(serializers.ModelSerializer):
 
 
 class RequestSerializer(serializers.ModelSerializer):
-    owner = UserSerializer(read_only=True, required=False)
+    user = UserSerializer(read_only=True, required=False)
 
     class Meta:
         model = Request
 
-        fields = ('id', 'owner', 'origin', 'destination', 'datetime', 'status')
+        fields = ('id', 'user', 'origin', 'destination', 'datetime', 'status')
         read_only_fields = ('id', 'datetime')
 
     def get_validation_exclusions(self, *args, **kwargs):
         exclusions = super(RequestSerializer, self).get_validation_exclusions()
 
-        return exclusions + ['owner']
+        return exclusions + ['user',]
 
 
 class TripSerializer(serializers.ModelSerializer):
