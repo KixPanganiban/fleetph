@@ -24,6 +24,10 @@
       controller: 'TripsController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/trips/trips-view.html',
+    }).when('/trips/:id', {
+      controller: 'TripController',
+      controllerAs: 'vm',
+      templateUrl: '/static/templates/trips/trip-detail.html'
     }).otherwise('/');
   }
 })();

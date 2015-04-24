@@ -20,6 +20,7 @@
     var Trips = {
       all: all,
       create: create,
+      get: get
     };
 
     return Trips;
@@ -34,6 +35,17 @@
     */
     function all() {
       return $http.get('/api/v1/trips');
+    }
+
+    /**
+     * @name get
+     * @desc Get the Trip
+     * @param {string} id The id to get Trips for
+     * @returns {Promise}
+     * @memberOf myapp.trips.services.Trips
+     */
+    function get(id) {
+      return $http.get('/api/v1/trips/' + id);
     }
 
 
