@@ -38,10 +38,17 @@ class TripSerializer(serializers.ModelSerializer):
     ship = ShipSerializer(read_only=True, required=False)
 
     class Meta:
-        model = Ship
+        model = Trip
 
-        fields = ('id', 'owner', 'origin', 'destination', 'status', 'created', 'closed')
-        read_only_fields = ('id','created')
+        fields = (
+            'id',
+            'ship',
+            'origin',
+            'destination',
+            'status',
+            'created',
+            'closed')
+        read_only_fields = ('id', 'created')
 
     def get_validation_exclusions(self, *args, **kwargs):
         exclusions = super(TripSerializer, self).get_validation_exclusions()

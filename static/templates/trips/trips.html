@@ -1,13 +1,13 @@
   <div class="row" ng-cloak>
-    <div ng-repeat="post in posts">
+    <div ng-repeat="trip in trips">
       <div class="col s12">
         <ul class="collection">
-          <post post="post"></post>
+            <trip trip="trip"></trip>
         </u>
       </div>
     </div>
 
-    <div ng-hide="posts && posts.length">
+    <div ng-hide="trips && trips.length">
       <div class="col s12 no-posts-here">
         <em>The are no posts here.</em>
       </div>
