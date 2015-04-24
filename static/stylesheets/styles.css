@@ -92,6 +92,17 @@
 	padding: 10px;
 }
 
+/**
+ * Generic: Page-title;
+ *
+ * Made By Ryan Wong
+ */
+
+.page-title {
+	margin-top: 10px;
+	margin-bottom: -20px;
+}
+
 
 /**
  * Generic: add button;
