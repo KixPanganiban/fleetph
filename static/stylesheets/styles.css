@@ -85,3 +85,15 @@
 	margin-top: -75px;
 	margin-bottom: 30px;
 }
+
+
+/**
+ * Generic: add button;
+ *
+ * Made By Ryan Wong
+ */
+.btn-add-new-post {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

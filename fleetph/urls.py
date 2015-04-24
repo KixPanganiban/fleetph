@@ -3,13 +3,15 @@ from django.contrib import admin
 
 from rest_framework_nested import routers
 
-from .views import IndexView
+from .views import IndexView, ShipViewSet, TripViewSet, RequestViewSet
 from authentication.views import AccountViewSet, UserView
 
 
 router = routers.SimpleRouter(trailing_slash=False)
 router.register(r'users', AccountViewSet)
-
+router.register(r'ships', ShipViewSet)
+router.register(r'trips', TripViewSet)
+router.register(r'requests', RequestViewSet)
 
 urlpatterns = patterns('',
 	url(r'^api/v1/', include(router.urls)),
