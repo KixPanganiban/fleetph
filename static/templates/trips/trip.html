@@ -1,3 +1,3 @@
 <li class="collection-item avatar">
-    <span>{{trip.id}}: From {{trip.origin}} to {{trip.destination}} on ship {{trip.ship.name}}</span>
+    <span>{{trip.id}}: From <reverse-geocode longlat="{{trip.origin}}"></reverse-geocode> to <reverse-geocode longlat="{{trip.destination}}"></reverse-geocode> on ship {{trip.ship.name}}</span>
 </li>
