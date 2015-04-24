@@ -12,10 +12,8 @@
   * @desc Define valid application routes
   */
   function config($routeProvider) {
-    $routeProvider.when('/login', {
-      controller: 'LoginController',
-      controllerAs: 'vm',
-      templateUrl: '/static/templates/authentication/login.html',
+    $routeProvider.when('/', {
+      templateUrl: '/static/templates/layout/index.html',
     }).otherwise('/');
   }
 })();

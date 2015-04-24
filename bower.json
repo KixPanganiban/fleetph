@@ -1,11 +1,12 @@
 {
-  "name": "django_rest_social_example",
+  "name": "fleet_ph",
   "version": "0.0.1",
-  "homepage": "https://github.com/rbwong/django-rest-social-example",
+  "homepage": "https://github.com/KixPanganiban/fleetph",
   "authors": [
+    "Kix Panganiban <kixpanganiban@gmail.com>",
     "Ryan Wong <ryan.wong022@gmail.com>"
   ],
-  "description": "DRF OAuth2 Social Auth Angular Seed",
+  "description": "Transportation app for DCS Hackathon 2015",
   "license": "MIT",
   "ignore": [
     "**/.*",

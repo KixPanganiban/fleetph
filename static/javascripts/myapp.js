@@ -6,6 +6,7 @@
       'myapp.config',
       'myapp.routes',
       'myapp.authentication',
+      'myapp.layout'
     ]);
 
   angular

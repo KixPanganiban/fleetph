@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'compressor',
     'oauth2_provider',
     'social.apps.django_app.default',
@@ -99,8 +100,8 @@ SOCIAL_AUTH_PIPELINE = (
     'authentication.pipeline.save_profile',
 )
 
-SOCIAL_AUTH_FACEBOOK_KEY = '1568765760070322'
-SOCIAL_AUTH_FACEBOOK_SECRET = '0f46fd43cc9b7322e321344a1987cda3'
+SOCIAL_AUTH_FACEBOOK_KEY = '861972850543003'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'aaf94d3391631fbccf4d213dc6a9ba71'
 
 # Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from facebook.
 # Email is not sent by default, to get it,

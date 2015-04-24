@@ -15,7 +15,7 @@
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
 
-    var myAppId = '';
+    var myAppId = '861972850543003';
     $FacebookProvider.init(myAppId);
   }
 })();

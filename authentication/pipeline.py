@@ -6,7 +6,7 @@ from authentication.models import Profile
 
 
 def save_profile(backend, user, response, *args, **kwargs):
-    img_url = 'http://graph.facebook.com/%s/picture?type=large' \
+    img_url = 'http://graph.facebook.com/%s/picture?width=150&height=150' \
         % response['id']
 
     try:
