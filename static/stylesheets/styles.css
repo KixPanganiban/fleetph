@@ -1,9 +1,87 @@
+/**
+ * Colors;
+ *
+ * Made By Ryan Wong
+ */
+.semi-transparent {
+    opacity: .6;
+}
+
+/**
+ * Navbars;
+ *
+ * Made By Ryan Wong
+ */
+
+.nav-transparent{
+  	padding: 0 20px;
+	background: transparent;
+	border-bottom: none;
+	box-shadow: none;
+	z-index: 1000;
+	top: 20px;
+	width: 100%;
+	position: absolute;
+}
+
+/**
+ * Navbar: avatar;
+ *
+ * Made By Ryan Wong
+ */
+
+
 .avatar {
 	line-height: 0px;
 }
 
 .avatar img {
+	border: 1px solid white;
 	margin: 12px 0;
 	width: 40px;
 	height: 40px;
+}
+
+/**
+ * Generic:header;
+ *
+ * Made By Ryan Wong
+ */
+
+.page-header {
+  margin-top: 0;
+  min-height: 400px;
+  background-size: cover;
+  background-position: 0% 80%;
+  color: white;
+}
+
+.page-header .container {
+  padding: 150px;
+}
+
+.page-header h2 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-header p {
+  font-weight: 600;
+  margin: 20px; 0
+}
+
+.page-header .btn {
+
+  	margin: 30px 0;
+}
+
+/**
+ * Index: header;
+ *
+ * Made By Ryan Wong
+ */
+
+.search-header {
+	margin-top: -75px;
+	margin-bottom: 30px;
 }
