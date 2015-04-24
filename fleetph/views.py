@@ -63,16 +63,7 @@ class RequestViewSet(viewsets.ModelViewSet):
     paginate_by_param = 'page_size'
     max_paginate_by = 50
 
-    def get_permissions(self):
-        if self.request.method in permissions.SAFE_METHODS:
-            return (permissions.AllowAny(),)
-
-        if self.request.method == 'POST':
-            return (permissions.IsAuthenticated(),)
-
-        return (IsOwnerOfPost(), )
-
     def perform_create(self, serializer):
-        instance = serializer.save(owner=self.request.user)
+        instance = serializer.save(user=self.request.user)
 
         return super(RequestViewSet, self).perform_create(serializer)

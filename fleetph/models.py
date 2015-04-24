@@ -10,12 +10,6 @@ class Request(models.Model):
     status = models.TextField(choices=(('O', 'Open'), ('C', 'Closed')),
                               default='O')
 
-    @classmethod
-    def create_request(cls, user, origin, destination):
-        req = cls(user=user, origin=origin, destination=destination,
-                  status='O')
-        return req.save()
-
 class Ship(models.Model):
     owner = models.ForeignKey(User)
     name = models.TextField(unique=True)

@@ -45,13 +45,13 @@
     * @memberOf myapp.requests.services.Requests
     */
      function create(origin, destination) {
-      return $http({method: 'post', url: '/api/v1/requests',
+      return $http({method: 'POST', url: '/api/v1/requests',
               headers: {
                 'Authorization': 'Bearer facebook ' + localStorageService.get('token')
               },
               data: {
                 'origin': origin,
-                'destination': destination
+                'destination': destination,
               }
               });
     };
