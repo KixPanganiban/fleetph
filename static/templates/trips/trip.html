@@ -1,3 +1,6 @@
 <li class="collection-item avatar">
-    <span>{{trip.id}}: From {{trip.origin}} to {{trip.destination}} on ship {{trip.ship.name}}</span>
+	<i class="mdi-maps-directions-bus circle green"></i>
+	<span class="title">#{{trip.id}}: {{trip.ship.body_text}} ({{trip.ship.plate_no}})</span>
+    <p>From: <b><reverse-geocode longlat="{{trip.origin}}"></reverse-geocode></b><br/>
+    To: <b><reverse-geocode longlat="{{trip.destination}}"></reverse-geocode></b></p>
 </li>

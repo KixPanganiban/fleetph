@@ -33,6 +33,7 @@
 <script type="text/javascript" src="{% static 'javascripts/trips/services/trips.service.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/trips/directives/trips.directive.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/trips/directives/trip.directive.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/trips/directives/reversegeocode.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'javascripts/requests/requests.module.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/requests/controllers/new-request.controller.js' %}"></script>
@@ -49,3 +50,5 @@
 <script type="text/javascript" src="{% static 'javascripts/utils/services/feed.service.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/utils/services/snackbar.service.js' %}"></script>
 {% endcompress %}
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
