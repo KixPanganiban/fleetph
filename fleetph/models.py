@@ -7,7 +7,8 @@ class Request(models.Model):
     origin = models.TextField(null=True, blank=True)
     destination = models.TextField(null=True, blank=True)
     datetime = models.DateTimeField(auto_now_add=True)
-    status = models.TextField(choices=(('O', 'Open'), ('C', 'Closed')))
+    status = models.TextField(choices=(('O', 'Open'), ('C', 'Closed')),
+                              default='O')
 
     @classmethod
     def create_request(cls, user, origin, destination):
@@ -45,6 +46,7 @@ class Trip(models.Model):
     ship = models.ForeignKey(Ship)
     origin = models.TextField()
     destination = models.TextField()
-    status = models.TextField(choices=(('O', 'Ongoing'), ('D', 'Done')))
+    status = models.TextField(choices=(('O', 'Ongoing'), ('D', 'Done')),
+                              default='0')
     created = models.DateTimeField(auto_now_add=True)
     closed = models.DateTimeField(null=True, blank=True)
