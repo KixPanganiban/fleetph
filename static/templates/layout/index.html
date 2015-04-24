@@ -12,7 +12,10 @@
     <form class="col s12 container">
       <div class="row">
         <div class="input-field col s6">
-          <a href="/requests/new" class="waves-effect waves-light  btn indigo right solid-color">Request a ride</a>
+          <a href="javascript:void(0)" 
+          	 class="waves-effect waves-light  btn indigo right solid-color"
+          	 ng-dialog="/static/templates/requests/new-request.html"
+          	 ng-dialog-controller="NewRequestController as vm">Request a ride</a>
         </div>
         <div class="input-field col s6">
           <a href="/trips" class="waves-effect waves-light  btn indigo solid-color">View rides</a>

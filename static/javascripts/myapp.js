@@ -8,6 +8,7 @@
       'myapp.authentication',
       'myapp.layout',
       'myapp.trips',
+      'myapp.requests',
       'myapp.utils'
     ]);
 
