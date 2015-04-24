@@ -8,11 +8,14 @@
   </div>
 </div>
 
-<div class="search-header semi-transparent black">
+<div class="search-header semi-transparent black" data-ng-show="vm.isAuthenticated">
     <form class="col s12 container">
       <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Search" id="first_name" type="text" class="validate">
+        <div class="input-field col s6">
+          <a href="/requests/new" class="waves-effect waves-light  btn indigo right solid-color">Request a ride</a>
+        </div>
+        <div class="input-field col s6">
+          <a href="/trips" class="waves-effect waves-light  btn indigo solid-color">View rides</a>
         </div>
       </div>
   	</form>
