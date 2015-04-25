@@ -21,6 +21,7 @@
     <map center="{{vm.coords_origin.lat}},{{vm.coords_origin.long}}" zoom="15">
       <div ng-repeat="req in vm.requests">
       <marker position="{{req.origin}}" icon="//maps.gstatic.com/intl/en_us/mapfiles/markers2/measle.png"></marker>
+      <marker position="{{req.destination}}" icon="//maps.gstatic.com/intl/en_us/mapfiles/markers2/measle_blue.png"></marker>
       </div>
       <marker position="{{vm.coords_origin.lat}},{{vm.coords_origin.long}}"></marker>
       <shape name="polyline" path="{{vm.trip.waypoints}}" geodesic="True" stroke-color="#0000FF" stroke-opacity=".5" stroke-weight="4"></shape>
