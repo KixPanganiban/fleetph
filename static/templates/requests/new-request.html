@@ -1,22 +1,24 @@
 <div ng-include src="'/static/templates/layout/navbar.html'"></div>
 
-<div class="page-header brown darken-2">
+<div class="page-header brown darken-2" style="background-image:url(https://a1.muscache.com/ic/discover/85);">
   <div class="container">
     <h2 class="center">Fleet.ph</h2>
     <p class="center">Request a trip</p>
   </div>
 </div>
 
-<section class="container">
+<section class="container search">
 <div class="row center">
   <form class="col s12" ng-submit="vm.submit()">
     
     <div class="row">
-      <div class="input-field col s12">
-        <input places-auto-complete types="['establishment']" class="validate" ng-model="vm.destination" />
+      <div class="input-field col s10">
+        <input places-auto-complete types="['establishment']" type='text' class="validate" ng-model="vm.destination" />
+      </div>
+      <div class="input-field col s2">
+        <button type="submit"  class="waves-effect waves-light btn indigo modal-action modal-close">Submit</button>
       </div>
     </div>
-    <button type="submit"  class="waves-effect waves-light btn indigo modal-action modal-close">Submit</button>
   </form>
 </div>
 </section>
