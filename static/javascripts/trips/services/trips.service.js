@@ -20,7 +20,7 @@
     var Trips = {
       all: all,
       create: create,
-      get: get
+      get: get,
     };
 
     return Trips;

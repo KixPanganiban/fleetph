@@ -9,7 +9,8 @@
       'myapp.layout',
       'myapp.trips',
       'myapp.requests',
-      'myapp.utils'
+      'myapp.utils',
+      'dbaq.google.directions'
     ]);
 
   angular

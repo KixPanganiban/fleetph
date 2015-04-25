@@ -25,6 +25,7 @@
     "angular-local-storage": "~0.1.5",
     "angular-facebook": "~0.2.3",
     "angularjs-geolocation": "~0.1.1",
-    "ngmap": "~1.7.7"
+    "ngmap": "~1.7.7",
+    "angularjs-google-directions": "*"
   }
 }
