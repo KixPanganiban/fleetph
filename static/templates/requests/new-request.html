@@ -1,12 +1,25 @@
-<div class="row">
+<div ng-include src="'/static/templates/layout/navbar.html'"></div>
+
+<div class="page-header brown darken-2">
+  <div class="container">
+    <h2 class="center">Fleet.ph</h2>
+    <p class="center">Request a trip</p>
+  </div>
+</div>
+
+<section class="container">
+<div class="row center">
   <form class="col s12" ng-submit="vm.submit()">
-    <h5>Request a ride</h5>
+    
     <div class="row">
       <div class="input-field col s12">
-        <input type="text" class="validate" ng-model="vm.destination" />
-        <label for="post_name">Destination</label>
+        <input places-auto-complete types="['establishment']" class="validate" ng-model="vm.destination" />
       </div>
     </div>
-    <button type="submit"  class="waves-effect waves-green btn-flat modal-action modal-close">Submit</button>
+    <button type="submit"  class="waves-effect waves-light btn indigo modal-action modal-close">Submit</button>
   </form>
 </div>
+</section>
+
+<footer ng-include src="'/static/templates/layout/footer.html'" class="page-footer indigo darken-3"></footer>
+

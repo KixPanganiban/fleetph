@@ -19,6 +19,8 @@
     }).when('/trips/new', {
       templateUrl: '/static/templates/trips/new-trip.html',
     }).when('/requests/new', {
+      controller: 'NewRequestController',
+      controllerAs: 'vm',
       templateUrl: '/static/templates/requests/new-request.html',
     }).when('/trips', {
       controller: 'TripsController',
