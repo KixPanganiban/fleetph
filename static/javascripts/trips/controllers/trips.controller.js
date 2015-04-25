@@ -34,6 +34,7 @@
       */
       function tripsuccessFn(data, status, headers, config) {
         vm.trips = data.data;
+        console.log(data.data);
       }
 
 

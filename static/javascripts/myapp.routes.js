@@ -23,7 +23,7 @@
     }).when('/trips', {
       controller: 'TripsController',
       controllerAs: 'vm',
-      templateUrl: '/static/templates/trips/trips.html',
+      templateUrl: '/static/templates/trips/trips-view.html',
     }).otherwise('/');
   }
 })();
