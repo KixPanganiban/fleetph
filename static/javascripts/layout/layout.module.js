@@ -7,5 +7,5 @@
     ]);
 
   angular
-    .module('myapp.layout.controllers', ['facebook']);
+    .module('myapp.layout.controllers', ['facebook', 'geolocation']);
 })();
