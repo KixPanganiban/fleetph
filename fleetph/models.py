@@ -10,11 +10,17 @@ class Request(models.Model):
     status = models.TextField(choices=(('O', 'Open'), ('C', 'Closed')),
                               default='O')
 
+    def __unicode__(self):
+        return "%s: %s -> %s"%(self.user.username, self.origin, self.destination)
+
 class Ship(models.Model):
     owner = models.ForeignKey(User)
     name = models.TextField(unique=True)
     body_text = models.TextField(default='Bus Express')
     plate_no = models.TextField(unique=True)
+
+    def __unicode__(self):
+        return "(%s) %s"%(self.name, self.body_text)
 
     def start_new_trip(self, origin, destination):
         for past_trip in Trip.objects.filter(ship=self, status='O'):
@@ -44,3 +50,6 @@ class Trip(models.Model):
                               default='O')
     created = models.DateTimeField(auto_now_add=True)
     closed = models.DateTimeField(null=True, blank=True)
+
+    def __unicode__(self):
+        return "%s: %s -> %s"%(self.ship, self.origin, self.destination)
