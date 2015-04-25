@@ -11,7 +11,7 @@
     ]);
 
   angular
-    .module('myapp.trips.controllers', []);
+    .module('myapp.trips.controllers', ['ngMap']);
 
   angular
     .module('myapp.trips.directives', ['ngDialog']);
