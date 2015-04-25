@@ -30,6 +30,10 @@
       controller: 'TripController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/trips/trip-detail.html'
+    }).when('/requests', {
+      controller: 'RequestsController',
+      controllerAs: 'vm',
+      templateUrl: '/static/templates/requests/requests-view.html',
     }).otherwise('/');
   }
 })();

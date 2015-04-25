@@ -1,19 +1,12 @@
 <div ng-include src="'/static/templates/layout/navbar.html'"></div>
 
-<div class="page-header brown darken-2" style="background-image:url(https://a1.muscache.com/ic/discover/85);">
-  <div class="container">
-    <h2 class="center">Request a trip</h2>
-    <p class="center">Fleet.ph</p>
-  </div>
-</div>
-
 <section class="container search">
 <div class="row center">
   <form class="col s12" ng-submit="vm.submit()">
     
     <div class="row">
       <div class="input-field col s10">
-        <input places-auto-complete types="['establishment']" type='text' class="validate" ng-model="vm.destination" />
+        <input placeholder="Enter destination" places-auto-complete types="['establishment']" type='text' class="validate" ng-model="vm.destination" />
       </div>
       <div class="input-field col s2">
         <button type="submit"  class="waves-effect waves-light btn indigo modal-action modal-close">Submit</button>
@@ -22,6 +15,15 @@
   </form>
 </div>
 </section>
+
+<div class="container">
+  <div map-lazy-load="http://maps.google.com/maps/api/js">
+    <map center="{{vm.coords_origin.lat}},{{vm.coords_origin.long}}" zoom="15">
+      <marker position="{{vm.coords_origin.lat}},{{vm.coords_origin.long}}"></marker>
+      <shape name="polyline" path="{{vm.trip.waypoints}}" geodesic="True" stroke-color="#0000FF" stroke-opacity=".5" stroke-weight="4"></shape>
+    </map>
+  </div>
+</div>
 
 <footer ng-include src="'/static/templates/layout/footer.html'" class="page-footer indigo darken-3"></footer>
 
