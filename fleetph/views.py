@@ -50,9 +50,6 @@ class TripViewSet(viewsets.ModelViewSet):
 class RequestViewSet(viewsets.ModelViewSet):
     serializer_class = RequestSerializer
     queryset = Request.objects.all()
-    paginate_by = 10
-    paginate_by_param = 'page_size'
-    max_paginate_by = 50
 
     def perform_create(self, serializer):
         instance = serializer.save(user=self.request.user)
